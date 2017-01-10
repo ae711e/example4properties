@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="example4propRes:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/example4propRes_jar</output-path>
+    <root id="archive" name="example4propertiesRes.jar">
+      <element id="module-output" name="example4propertiesRes" />
+    </root>
+  </artifact>
+</component>
