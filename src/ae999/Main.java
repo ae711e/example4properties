@@ -9,11 +9,13 @@ import javax.swing.*;
 import java.awt.*;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Properties;
+import java.util.Locale;
+import java.util.PropertyResourceBundle;
 
 /*
- Читаем свойства из текстового файл свойств
+ Читаем назавния кнопок из ресурсного файла
  by novel http://java-course.ru/begin/collections_02/
+ 
  */
 public class Main extends JFrame {
     
@@ -21,15 +23,12 @@ public class Main extends JFrame {
     //
     String upText="up";
     String dnText="down";
-    
-    try {
-      Properties pr = new Properties();
-      pr.load(new FileReader("simple.properties")); // читаем файл свойст
-      upText = pr.getProperty("up.button.title"); // читаем свойство, если свойства нет, то NULL
-      dnText = pr.getProperty("dn.button.title"); // читаем свойство
-    } catch (IOException e) {
-      e.printStackTrace();
-    }
+    // чтобы отображались правильно русские буквы
+    // для файла simple.properties в настройках File/Settings.../Editor/File Encoding/
+    // внизу,где Default encoding for properties files надо выставить галку "transparent native-to-ascii conversation"
+    PropertyResourceBundle pr = (PropertyResourceBundle) PropertyResourceBundle.getBundle("ae999.simple");
+    upText = pr.getString("up.button.title"); 
+    dnText = pr.getString("dn.button.title"); 
     
     JButton up=new JButton(upText);
     JButton down = new JButton(dnText);

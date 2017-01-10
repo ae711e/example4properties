@@ -1,2 +1,3 @@
 ﻿#
-Читаем свойства из файла свойств, с помощью стандартного класса Properties (java.util.Properties)
+Читаем свойства из ресурсного файла свойств, с помощью стандартного класса PropertyResourceBundle
+(java.util.PropertyResourceBundle)
