@@ -23,12 +23,13 @@ public class Main extends JFrame {
     //
     String upText="up";
     String dnText="down";
+    // by novel  http://szelenin.blogspot.ru/2012/06/intellij-idea.html
     // чтобы отображались правильно русские буквы
     // для файла simple.properties в настройках File/Settings.../Editor/File Encoding/
     // внизу,где Default encoding for properties files надо выставить галку "transparent native-to-ascii conversation"
     PropertyResourceBundle pr = (PropertyResourceBundle) PropertyResourceBundle.getBundle("ae999.simple");
-    upText = pr.getString("up.button.title"); 
-    dnText = pr.getString("dn.button.title"); 
+    upText = pr.getString("up.button.title"); // читаем свойство, если его нет, то NULL
+    dnText = pr.getString("dn.button.title"); // читаем свойство
     
     JButton up=new JButton(upText);
     JButton down = new JButton(dnText);
