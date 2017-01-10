@@ -35,7 +35,7 @@ public class Main extends JFrame {
     JButton down = new JButton(dnText);
     add(up, BorderLayout.NORTH);
     add(down, BorderLayout.SOUTH);
-    setBounds(200,200, 500,500);
+    setBounds(210,210, 400,400);
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     setVisible(true);
     
